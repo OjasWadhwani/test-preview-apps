@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: hasura/hasura-cloud-preview-apps@issue-73
         with:
-          name: "preview-samp-test-${{github.env.GITHUB_HEAD_REF}}${{github.event.number}}"
+          name: "test-preview-apps-${{github.env.GITHUB_HEAD_REF}}${{github.event.number}}"
           postgresDBConfig: |
             POSTGRES_SERVER_CONNECTION_URI=${{secrets.POSTGRES_SERVER_CONNECTION_URI}}
             PG_ENV_VARS_FOR_HASURA=PG_DATABASE_URL,PG_DB_URL_1,PG_DB_URL_2
